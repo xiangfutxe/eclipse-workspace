@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <properties resource="jdbc.properties"></properties>
+  <!-- 数据库环境 -->
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <!-- 映射文件 -->
+  <mappers>
+    <mapper class="com.ssm.mapper.UserMapper"/> 
+    <mapper class="com.ssm.mapper.AdminMapper"/> 
+     <mapper class="com.ssm.mapper.DeptMapper"/> 
+ <mapper class="com.ssm.mapper.JobMapper"/> 
+  <mapper class="com.ssm.mapper.ContractMapper"/> 
+   <mapper class="com.ssm.mapper.BorrowApplyMapper"/> 
+  <mapper class="com.ssm.mapper.ProductTypeMapper"/> 
+  <mapper class="com.ssm.mapper.ProductMapper"/>
+ <mapper class="com.ssm.mapper.ProductStockTransfersMapper"/>    
+   <mapper class="com.ssm.mapper.RewardDetailMapper"/>   
+   <mapper class="com.ssm.mapper.ProductStockMapper"/>   
+   <mapper class="com.ssm.mapper.ProductDetailMapper"/>   
+      <mapper class="com.ssm.mapper.ProductPriceMapper"/>   
+     <mapper class="com.ssm.mapper.WeixinUserInfoMapper"/>     
+   <mapper class="com.ssm.mapper.OrderMapper"/>  
+   <mapper class="com.ssm.mapper.CenterMapper"/>    
+    <mapper class="com.ssm.mapper.ModuleMapper"/>   
+    <mapper class="com.ssm.mapper.JoinInfoMapper"/>
+     <mapper class="com.ssm.mapper.JoinUpdateDetailMapper"/>
+          <mapper class="com.ssm.mapper.RankManageUpdateDetailMapper"/>
+    <mapper class="com.ssm.mapper.UidPoolMapper"/>                 
+    <mapper class="com.ssm.mapper.WSettleMapper"/> 
+     <mapper class="com.ssm.mapper.ParamMapper"/>   
+     <mapper class="com.ssm.mapper.EmptyNumMapper"/>  
+        <mapper class="com.ssm.mapper.MoneyMapper"/>    
+        <mapper class="com.ssm.mapper.ChargeApplyMapper"/>  
+        <mapper class="com.ssm.mapper.AddressMapper"/>  
+         <mapper class="com.ssm.mapper.AgentApplyMapper"/>  
+        <mapper class="com.ssm.mapper.OrderDetailMapper"/> 
+        <mapper class="com.ssm.mapper.OrderDetailProductMapper"/> 
+         <mapper class="com.ssm.mapper.OrderDeliveryMapper"/> 
+      <mapper class="com.ssm.mapper.ProductSortMapper"/>   
+         <mapper class="com.ssm.mapper.OrderDeliveryDetailMapper"/> 
+        <mapper class="com.ssm.mapper.InventoryMapper"/>                      
+        <mapper class="com.ssm.mapper.InventoryApplyMapper"/>  
+       <mapper class="com.ssm.mapper.InventoryDetailMapper"/> 
+       <mapper class="com.ssm.mapper.AdminLogMapper"/> 
+              <mapper class="com.ssm.mapper.UserLogMapper"/> 
+       
+       <mapper class="com.ssm.mapper.NewsMapper"/>
+       <mapper class="com.ssm.mapper.MessageMapper"/>                                      
+       <mapper class="com.ssm.mapper.BankAccountMapper"/>
+          <mapper class="com.ssm.mapper.SettleMapper"/>  
+                    <mapper class="com.ssm.mapper.DSettleMapper"/>  
+                    <mapper class="com.ssm.mapper.SettleDayMapper"/>  
+          <mapper class="com.ssm.mapper.WRewardMapper"/> 
+                    <mapper class="com.ssm.mapper.RewardMapper"/> 
+           <mapper class="com.ssm.mapper.DRewardMapper"/> 
+      <mapper class="com.ssm.mapper.WRewardExtremeMapper"/>     
+         <mapper class="com.ssm.mapper.WithDrewMapper"/>    
+        <mapper class="com.ssm.mapper.PromotionMapper"/> 
+     <mapper class="com.ssm.mapper.AccountSupplementMapper"/>                                
+     <mapper class="com.ssm.mapper.TokenMapper"/> 
+                                 
+                                   
+  </mappers>
+</configuration>

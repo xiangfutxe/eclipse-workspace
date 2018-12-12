@@ -1,0 +1,42 @@
+@charset "utf-8";
+*{ margin:0; padding:0;}
+body { font:12px/1.8 Arial; color:#666;}
+h1.tit-h1 { font-size:38px; text-align:center; margin:30px 0 15px; color:#f60;}
+.wrap{border:1px dashed #ccc; background:#f8f8f8; padding:20px;}
+
+/* 本案例需要的css样式 */
+ul,li{ list-style:none;}
+.tab{ width:100%; margin:20px auto 50px;}
+.tab-hd {overflow:hidden;padding-left:30px;padding-right:30px;}
+.tab-hd li{ float:left; width:50%;border-bottom:1px solid #b5b6b7;font-size:16px;color:#616263;padding-bottom:10px; text-align:center; cursor:pointer;}
+.tab-hd li.active{ color:#F60;border-bottom:1px solid #F60;}
+.tab-bd {overflow:hidden; margin-top:30px;padding-left:10px;padding-right:10px;}
+.tab-bd li{display:none;border-top:0 none; font-size:24px;}
+.tab-bd li .login{width:100%;display:block;margin-top:0px;background:#fff;}
+
+.tab-bd li .login .li{width:100%;height:50px;display:inline-block;border-top:0px;padding-left:5px;border-bottom:1px solid #b5b6b7;border-left:0px;border-right:0px;font-size:14px;}
+.tab-bd li .login .li input{width:70%;height:50px;display:inline-block;padding-left:10px;font-size:14px;border-top:0px;padding-left:5px;border-bottom:1px solid #b5b6b7;border-left:0px;border-right:0px;}
+.tab-bd li .login .li span{float:right;margin-right:10px;margin-top:5px;color:#F60;font-weight:bold;background:url(../images/yzm-img.png) no-repeat;height:50px;display:inline-block;font-size:23px;}
+.tab-bd li.thisclass{ display:list-item;}
+
+//button 设置
+.tab-bd li .submit{
+	width:100%;
+	display:block;margin-top:0px;
+	padding-left:30px;padding-right:30px;
+}
+.forget-psw{float:right;font-size:14px;margin-top:10px;}
+.btn-login{width:100%;height:40px;margin-top:30px;font-size:20px;background:#c5a069;color:#fff;border:1px solid #d1d1d1;border-radius: 5px;}
+.btn-login:hover{
+	color:#fff;
+}
+
+.tab-bd li .other{
+	width:100%;
+	display:block;margin-top:40px;
+	padding-left:30px;padding-right:30px;font-size:14px;text-align:center;
+}
+.font-red{
+	color:#fc2f2f;
+}
+}

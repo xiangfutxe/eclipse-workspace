@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>qinkuai</display-name>
+  <filter>
+  <filter-name>EncodingFilter</filter-name>
+  <filter-class>com.utils.EncodingFilter</filter-class>
+  <init-param>
+  <param-name>encoding</param-name>
+  <param-value>UTF-8</param-value>
+  </init-param>
+  </filter>
+  <filter-mapping>
+  <filter-name>EncodingFilter</filter-name>
+   <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <listener>
+  <listener-class>com.utils.CounterListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>com.utils.OrderWeekListener</listener-class>
+</listener>
+  
+<servlet>       
+ <servlet-name>ServletConfigurator</servlet-name>
+ <servlet-class>       
+   org.logicalcobwebs.proxool.configuration.ServletConfigurator</servlet-class>       
+ <init-param>       
+   <param-name>xmlFile</param-name>       
+   <param-value>WEB-INF/proxool.xml</param-value>       
+ </init-param>       
+ <load-on-startup>1</load-on-startup>       
+</servlet>
+  <servlet>
+  <servlet-name>AdminServlet</servlet-name>
+  <servlet-class>com.servlet.AdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>AdminServlet</servlet-name>
+  <url-pattern>/admin/AdminServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+ <servlet-name>BranchServlet</servlet-name>
+  <servlet-class>com.servlet.BranchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>BranchServlet</servlet-name>
+  <url-pattern>/admin/BranchServlet.do</url-pattern>
+  </servlet-mapping>
+   <servlet>
+ <servlet-name>BranchServlet_WAP</servlet-name>
+  <servlet-class>com.servlet.BranchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>BranchServlet_WAP</servlet-name>
+  <url-pattern>/wap/BranchServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+ <servlet-name>InventoryServlet</servlet-name>
+  <servlet-class>com.servlet.InventoryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>InventoryServlet</servlet-name>
+  <url-pattern>/admin/InventoryServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+ <servlet-name>ShortMessageServlet</servlet-name>
+  <servlet-class>com.servlet.ShortMessageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ShortMessageServlet</servlet-name>
+  <url-pattern>/admin/ShortMessageServlet.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+ <servlet-name>PurchaseApplyServlet</servlet-name>
+  <servlet-class>com.servlet.PurchaseApplyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>PurchaseApplyServlet</servlet-name>
+  <url-pattern>/admin/PurchaseApplyServlet.do</url-pattern>
+  </servlet-mapping>
+ <servlet>
+ <servlet-name>ProductTypeServlet</servlet-name>
+  <servlet-class>com.servlet.ProductTypeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ProductTypeServlet</servlet-name>
+  <url-pattern>/admin/ProductTypeServlet.do</url-pattern>
+  </servlet-mapping>
+   <servlet>
+ <servlet-name>ProductUnitServlet</servlet-name>
+  <servlet-class>com.servlet.ProductUnitServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ProductUnitServlet</servlet-name>
+  <url-pattern>/admin/ProductUnitServlet.do</url-pattern>
+  </servlet-mapping>
+   <servlet>
+ <servlet-name>ProductAttributeServlet</servlet-name>
+  <servlet-class>com.servlet.ProductAttributeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ProductAttributeServlet</servlet-name>
+  <url-pattern>/admin/ProductAttributeServlet.do</url-pattern>
+  </servlet-mapping>
+<servlet>
+ <servlet-name>ProductServlet</servlet-name>
+  <servlet-class>com.servlet.ProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ProductServlet</servlet-name>
+  <url-pattern>/admin/ProductServlet.do</url-pattern>
+  </servlet-mapping>
+<servlet>
+ <servlet-name>ProductServlet_WAP</servlet-name>
+  <servlet-class>com.servlet.ProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ProductServlet_WAP</servlet-name>
+  <url-pattern>/wap/ProductServlet</url-pattern>
+  </servlet-mapping>
+<servlet>
+ <servlet-name>ProductServlet_USER_WAP</servlet-name>
+  <servlet-class>com.servlet.ProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ProductServlet_USER_WAP</servlet-name>
+  <url-pattern>/wap/user/ProductServlet.do</url-pattern>
+  </servlet-mapping>
+<servlet>
+ <servlet-name>TimeParamServlet</servlet-name>
+  <servlet-class>com.servlet.TimeParamServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>TimeParamServlet</servlet-name>
+  <url-pattern>/admin/TimeParamServlet.do</url-pattern>
+  </servlet-mapping>
+    <servlet>
+ <servlet-name>ReportServlet</servlet-name>
+  <servlet-class>com.servlet.ReportServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ReportServlet</servlet-name>
+  <url-pattern>/admin/ReportServlet.do</url-pattern>
+  </servlet-mapping>
+<servlet>
+ <servlet-name>UserServlet</servlet-name>
+  <servlet-class>com.servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UserServlet</servlet-name>
+  <url-pattern>/admin/UserServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+ <servlet-name>UserServlet_WAP</servlet-name>
+  <servlet-class>com.servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UserServlet_WAP</servlet-name>
+  <url-pattern>/wap/user/UserServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+ <servlet-name>UserServlet_USER</servlet-name>
+  <servlet-class>com.servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UserServlet_USER</servlet-name>
+  <url-pattern>/user/UserServlet.do</url-pattern>
+  </servlet-mapping>
+
+<servlet>
+ <servlet-name>ChargeApplyServlet_ADMIN</servlet-name>
+  <servlet-class>com.servlet.ChargeApplyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ChargeApplyServlet_ADMIN</servlet-name>
+  <url-pattern>/admin/ChargeApplyServlet.do</url-pattern>
+  </servlet-mapping>
+
+<servlet>
+ <servlet-name>ChargeApplyServlet</servlet-name>
+  <servlet-class>com.servlet.ChargeApplyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ChargeApplyServlet</servlet-name>
+  <url-pattern>/user/ChargeApplyServlet.do</url-pattern>
+  </servlet-mapping>
+<servlet>
+ <servlet-name>ChargeApplyServlet_USER_WAP</servlet-name>
+  <servlet-class>com.servlet.ChargeApplyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ChargeApplyServlet_USER_WAP</servlet-name>
+  <url-pattern>/wap/user/ChargeApplyServlet.do</url-pattern>
+  </servlet-mapping>
+<servlet>
+ <servlet-name>SupplierServlet_ADMIN</servlet-name>
+  <servlet-class>com.servlet.SupplierServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>SupplierServlet_ADMIN</servlet-name>
+  <url-pattern>/admin/SupplierServlet.do</url-pattern>
+  </servlet-mapping>
+<servlet>
+ <servlet-name>RewardServlet</servlet-name>
+  <servlet-class>com.servlet.RewardServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>RewardServlet</servlet-name>
+  <url-pattern>/admin/RewardServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+ <servlet-name>RewardServlet_USER</servlet-name>
+  <servlet-class>com.servlet.RewardServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>RewardServlet_USER</servlet-name>
+  <url-pattern>/user/RewardServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+ <servlet-name>RewardServlet_USER_WAP</servlet-name>
+  <servlet-class>com.servlet.RewardServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>RewardServlet_USER_WAP</servlet-name>
+  <url-pattern>/wap/user/RewardServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+ <servlet-name>OrderServlet_WAP</servlet-name>
+  <servlet-class>com.servlet.OrderServlet</servlet-class>
+ </servlet>
+  <servlet-mapping>
+  <servlet-name>OrderServlet_WAP</servlet-name>
+  <url-pattern>/wap/OrderServlet</url-pattern>
+  </servlet-mapping>
+ <servlet>
+ <servlet-name>OrderServlet_USER_WAP</servlet-name>
+  <servlet-class>com.servlet.OrderServlet</servlet-class>
+ </servlet>
+  <servlet-mapping>
+  <servlet-name>OrderServlet_USER_WAP</servlet-name>
+  <url-pattern>/wap/user/OrderServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+<servlet-name>OrderServlet</servlet-name>
+  <servlet-class>com.servlet.OrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>OrderServlet</servlet-name>
+  <url-pattern>/admin/OrderServlet.do</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+<servlet-name>BankAccountServlet</servlet-name>
+  <servlet-class>com.servlet.BankAccountServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>BankAccountServlet</servlet-name>
+  <url-pattern>/admin/BankAccountServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+<servlet-name>AccountServlet_Admin</servlet-name>
+  <servlet-class>com.servlet.AccountServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>AccountServlet_Admin</servlet-name>
+  <url-pattern>/admin/AccountServlet.do</url-pattern>
+  </servlet-mapping>
+   <servlet>
+<servlet-name>AccountSupplementServlet_Admin</servlet-name>
+  <servlet-class>com.servlet.AccountSupplementServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>AccountSupplementServlet_Admin</servlet-name>
+  <url-pattern>/admin/AccountSupplementServlet.do</url-pattern>
+  </servlet-mapping>
+    <servlet>
+<servlet-name>AccountServlet_Wap</servlet-name>
+  <servlet-class>com.servlet.AccountServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>AccountServlet_Wap</servlet-name>
+  <url-pattern>/wap/AccountServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+<servlet-name>AddressServlet</servlet-name>
+  <servlet-class>com.servlet.AddressServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>AddressServlet</servlet-name>
+  <url-pattern>/user/AddressServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+<servlet-name>AddressServlet_USER_WAP</servlet-name>
+  <servlet-class>com.servlet.AddressServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>AddressServlet_USER_WAP</servlet-name>
+  <url-pattern>/wap/user/AddressServlet.do</url-pattern>
+  </servlet-mapping>
+ <servlet>
+<servlet-name>WithDrewServlet</servlet-name>
+  <servlet-class>com.servlet.WithDrewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>WithDrewServlet</servlet-name>
+  <url-pattern>/admin/WithDrewServlet.do</url-pattern>
+  </servlet-mapping>
+ <servlet>
+<servlet-name>WithDrewServlet_USER</servlet-name>
+  <servlet-class>com.servlet.WithDrewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>WithDrewServlet_USER</servlet-name>
+  <url-pattern>/user/WithDrewServlet.do</url-pattern>
+  </servlet-mapping>
+ <servlet>
+<servlet-name>WithDrewServlet_USER_WAP</servlet-name>
+  <servlet-class>com.servlet.WithDrewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>WithDrewServlet_USER_WAP</servlet-name>
+  <url-pattern>/wap/user/WithDrewServlet.do</url-pattern>
+  </servlet-mapping>
+ 
+   <servlet>
+<servlet-name>ReportServlet_USER</servlet-name>
+  <servlet-class>com.servlet.ReportServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ReportServlet_USER</servlet-name>
+  <url-pattern>/user/ReportServlet.do</url-pattern>
+  </servlet-mapping>
+   <servlet>
+<servlet-name>ReportServlet_WAP</servlet-name>
+  <servlet-class>com.servlet.ReportServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ReportServlet_WAP</servlet-name>
+  <url-pattern>/wap/ReportServlet.do</url-pattern>
+  </servlet-mapping>
+ <servlet>
+<servlet-name>MessageServlet</servlet-name>
+  <servlet-class>com.servlet.MessageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>MessageServlet</servlet-name>
+  <url-pattern>/admin/MessageServlet.do</url-pattern>
+  </servlet-mapping>
+  
+ <servlet>
+<servlet-name>MessageServlet_USER</servlet-name>
+  <servlet-class>com.servlet.MessageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>MessageServlet_USER</servlet-name>
+  <url-pattern>/user/MessageServlet.do</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+<servlet-name>NewsServlet</servlet-name>
+  <servlet-class>com.servlet.NewsServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>NewsServlet</servlet-name>
+  <url-pattern>/admin/NewsServlet.do</url-pattern>
+  </servlet-mapping>
+   <servlet>
+<servlet-name>NewsServlet_WAP</servlet-name>
+  <servlet-class>com.servlet.NewsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>NewsServlet_WAP</servlet-name>
+  <url-pattern>/wap/NewsServlet.do</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+<servlet-name>MessageServlet_WAP</servlet-name>
+  <servlet-class>com.servlet.MessageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>MessageServlet_WAP</servlet-name>
+  <url-pattern>/wap/MessageServlet.do</url-pattern>
+  </servlet-mapping>
+   <servlet>
+<servlet-name>NewsServlet_USER</servlet-name>
+  <servlet-class>com.servlet.NewsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>NewsServlet_USER</servlet-name>
+  <url-pattern>/user/NewsServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+<servlet-name>ParamServlet</servlet-name>
+  <servlet-class>com.servlet.ParamServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ParamServlet</servlet-name>
+  <url-pattern>/admin/ParamServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+<servlet-name>CenterServlet</servlet-name>
+  <servlet-class>com.servlet.CenterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CenterServlet</servlet-name>
+  <url-pattern>/admin/CenterServlet.do</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+<servlet-name>CenterServlet_USER</servlet-name>
+  <servlet-class>com.servlet.CenterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CenterServlet_USER</servlet-name>
+  <url-pattern>/user/CenterServlet.do</url-pattern>
+  </servlet-mapping>
+    <servlet>
+<servlet-name>TeamServlet</servlet-name>
+  <servlet-class>com.servlet.TeamServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>TeamServlet</servlet-name>
+  <url-pattern>/admin/TeamServlet.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+<servlet-name>LogServlet</servlet-name>
+  <servlet-class>com.servlet.LogServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>LogServlet</servlet-name>
+  <url-pattern>/admin/LogServlet.do</url-pattern>
+  </servlet-mapping>
+   
+    <servlet>
+<servlet-name>OrderCenterServlet</servlet-name>
+  <servlet-class>com.servlet.OrderCenterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>OrderCenterServlet</servlet-name>
+  <url-pattern>/shop/OrderCenterServlet</url-pattern>
+  </servlet-mapping>
+   <servlet>
+<servlet-name>OrderCenterServlet_Admin</servlet-name>
+  <servlet-class>com.servlet.OrderCenterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>OrderCenterServlet_Admin</servlet-name>
+  <url-pattern>/admin/OrderCenterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+<servlet-name>PromotionServlet</servlet-name>
+  <servlet-class>com.servlet.PromotionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>PromotionServlet</servlet-name>
+  <url-pattern>/admin/PromotionServlet.do</url-pattern>
+  </servlet-mapping>
+   <servlet>
+<servlet-name>RankManageUpdateServlet</servlet-name>
+  <servlet-class>com.servlet.RankManageUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>RankManageUpdateServlet</servlet-name>
+  <url-pattern>/admin/RankManageUpdateServlet.do</url-pattern>
+  </servlet-mapping>
+   <servlet>
+<servlet-name>CenterServlet_shop</servlet-name>
+  <servlet-class>com.servlet.CenterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CenterServlet_shop</servlet-name>
+  <url-pattern>/shop/CenterServlet.do</url-pattern>
+  </servlet-mapping>
+  
+  <!--NFDFlightDataTaskListener 监听器-->
+<listener>
+    <listener-class>com.utils.NFDFlightDataTaskListener</listener-class>
+</listener>
+<listener> 
+<listener-class>com.servlet.ContextListener</listener-class> 
+</listener> 
+</web-app>
