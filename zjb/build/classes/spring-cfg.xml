@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+	
+	<context:annotation-config />
+	<context:component-scan base-package="com.ssm.*"/>
+	<bean id="source" class="com.ssm.pojo.Source">
+		<property name="fruit" value="橙汁"/>
+		<property name="sugar" value="少糖"/>
+		<property name="size" value="大杯"/>
+	</bean>
+	
+	<bean id="juiceMaker" class="com.ssm.pojo.JuiceMaker">
+		<property name="beverageShop" value="贡茶"/>
+		<property name="source" ref="source"/>
+	</bean>
+	
+	<bean id = "dataSource"  class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://localhost:3306/zhkc?useUnicode=true&amp;autoReconnect=true&amp;characterEncoding=UTF-8"/>
+		<property name="username" value="root"/>
+		<property name="password" value="101010"/>
+		<!-- 连接池的最大数据库连接数 -->
+		<property name="maxActive" value="255"/>
+		<!-- 最大等待连接中的数量 -->
+		<property name="maxIdle" value="5"/>
+		<!-- 最大等待毫秒数 -->
+		<property name="maxWait" value="10000"/>
+	</bean>
+	
+	
+	<bean id="SqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="configLocation" value="classpath:sqlMapConfig.xml"/>
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	
+	<bean  class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.ssm.mapper"/>
+		<property name="SqlSessionFactoryBeanName" value= "SqlSessionFactory"/>
+		<property name="annotationClass" value="org.springframework.stereotype.Repository"/>
+	</bean>
+</beans>

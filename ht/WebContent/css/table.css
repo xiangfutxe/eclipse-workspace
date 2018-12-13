@@ -1,0 +1,135 @@
+.ht_table h2, .ht_table label {
+	font-family:Georgia, Times, "Times New Roman", serif;
+	
+}
+.form_hint, .required_notification {font-size: 12px;}
+
+
+.ht_table ul {
+    width:840px;
+    list-style-type:none;
+    list-style-position:outside;
+    margin:0px;
+    padding:0px;
+    border:1px solid #e4e8e5;
+    float: left;
+}
+
+.ht_table ul p{
+     padding:5px 5px 5px 5px;
+     line-height: 180%;  
+     margin:-0.8em 0;
+}
+
+.ht_table ul li p{
+     padding:5px 5px 5px 5px;
+     line-height: 180%;  
+     margin:-0.8em 0;
+}
+
+.ht_table ul li h2{
+  height:30px;
+	font-size: 14px;
+    margin:0;
+    font-family: 黑体;
+}
+
+
+
+.ht_table h2 {
+	height:30px;
+	font-size: 14px;
+    margin:0;
+    font-family: 黑体;
+}
+
+.ht_table h2 a{
+	font-size:12px;
+	 font-weight:bold;
+	  color:#6f2569;
+}
+
+
+.ht_table li span{
+    color:#777;
+    float:right;
+}
+
+.ht_table label {
+    width:700px;
+    margin-top: 3px;
+    display:inline-block;
+    float:left;
+    padding:3px;
+}
+
+.h2 {
+	height:36px;
+	  color:#ff0a16;
+	  font-weight:bold;
+	  font-family: 黑体;
+	  font-size: 14px;
+	  border-bottom:1px dashed #e4e8e5;
+}
+
+.h2 a{
+	 color:#6f2569; 
+	  font-size: 14px;
+}
+
+.h2_1{
+	height:36px;
+	  background: url(../images/h2_banner.jpg);
+	  color:#ff0a16;
+	  font-weight:bold;
+	  font-family: 黑体;
+	  font-size: 14px;
+	  padding:5px 0px 0px 5px;
+	  border-bottom:0px dashed #e4e8e5;
+}
+
+
+
+.h1 {
+	height:23px;
+	font-size:14px;
+	font-family: 黑体;
+	padding:10px 5px 2px 5px;
+	border-bottom:1px dashed #e4e8e5;
+}
+
+.h5 {
+	width:250px;
+	font-size:14px;
+	font-family: 黑体;
+	padding:10px 15px 2px 15px;
+	border-bottom:0px dashed #e4e8e5;
+	float: left;
+}
+
+
+.h1 a{
+	 color:#6f2569; font-size:12px;
+}
+
+.h3 {
+	float:left;
+}
+
+.h4{
+	text-align:center;
+}
+
+.h6{
+	width:840px;
+	float:center;
+	padding:10px 10px 10px 20px;
+}
+
+
+.required {
+	 color:#ff0a16;
+   	font-size:12px;
+}
+
+
